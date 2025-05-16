@@ -15,8 +15,8 @@ const ImageTextExtractor = () => {
       reader.readAsDataURL(file);
     }
   };
-
-  const handleProcessImage = () => {
+/
+  const handleProcessImage = () => {                                                                                                                                      //
     if (!image) return alert('Upload image');
     setLoading(true);
     Tesseract.recognize(image, 'eng')
