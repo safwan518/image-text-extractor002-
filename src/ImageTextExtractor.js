@@ -25,7 +25,7 @@ const ImageTextExtractor = () => {
       .finally(() => setLoading(false));
   };
 
-  // دالة تولد سؤال وجواب تلقائي عن السطر فقط
+
   const generateQnA = async (line, index) => {
     setQa(prev => ({ ...prev, [index]: 'Loading...' }));
     setLoading(true);
@@ -51,7 +51,7 @@ const ImageTextExtractor = () => {
     }
   };
 
-  // دالة تخلي المستخدم يسأل سؤال محدد عن السطر ويتم إرسال السؤال مع النص للـ AI
+
   const AskAI = async (line, index) => {
     const userQuestion = prompt(`Ask your question about:\n"${line.trim()}"`);
     if (!userQuestion || userQuestion.trim() === '') {
